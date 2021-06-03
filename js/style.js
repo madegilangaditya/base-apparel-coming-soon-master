@@ -1,6 +1,6 @@
 document.getElementById('btn-submit').addEventListener('click', validateEmail);
 
-function validateEmail(){
+function validateEmail(e){
     const email = document.getElementById('email');
     const invalid = document.querySelector('.invalid-feedback');
     const btn = document.querySelector('#btn-submit');
@@ -15,4 +15,5 @@ function validateEmail(){
         email.style.borderColor = 'hsl(0, 36%, 70%)';
         btn.classList.remove('btn-error');
     }
+    e.preventDefault();
 }

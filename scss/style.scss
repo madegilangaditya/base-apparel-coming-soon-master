@@ -1,0 +1,115 @@
+$font: 'Josefin Sans', sans-serif;
+$primary-color1: hsl(0, 36%, 70%);
+$primary-color2: hsl(0, 93%, 68%);
+$neutral-color: hsl(0, 6%, 24%);
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: 400 0.875rem/1.5 $font;
+    color: $primary-color1;
+}
+
+h1{
+    font-size: 2.625rem;
+    line-height: 1.1;
+    color: $neutral-color;
+}
+
+img{
+    width: 100%;
+}
+
+.showcase{
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+.wrap{
+    max-width: 100%;
+    margin: auto;
+}
+
+.container{
+    padding: 0 32px;
+    margin: auto;
+}
+
+.card-logo{
+    padding: 30px 0;
+    max-width: 125px;
+}
+
+.content-text{
+    padding: 60px 0 90px;
+}
+
+.text-content{
+    text-align: center;
+    h1{
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        
+        span{
+            color: $primary-color1;
+            font-weight: 300;
+        }
+    }
+}
+
+.wrap-form{
+    margin-top: 35px;
+    
+    form{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    input[type="text"]{
+        padding: 18px 70px 18px 24px;
+        border-radius: 25px;
+        border: 1px solid $primary-color1;
+        width: 100%;
+        background: transparent;
+    }
+    ::placeholder{
+        color: $primary-color1;
+    }
+    .invalid-feedback{
+        padding: 5px 25px;
+        color: $primary-color2;
+        display: none;
+    }
+    button{
+        padding: 11px 25px;
+        border-radius: 25px;
+        margin-left: -65px;
+        background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        box-shadow: 0px 5px 10px 0px hsl(0, 80%, 86%);
+        border:none;
+        position: relative;
+
+        img{
+            width: 15px;
+            height: 24px;
+        }
+    }
+    button:hover {
+        background: #f8bfbf;
+    }
+    .btn-error:before{
+        content: "";
+        background: left center no-repeat url(../images/icon-error.svg), transparent;
+        width: 25px;
+        height: 53px;
+        position: absolute;
+        left: -35px;
+        bottom: 0px;
+    }
+}
+
+@import 'responsive';
+
